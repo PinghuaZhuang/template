@@ -3,19 +3,13 @@
   "title": "zp",
   "description": "JavaScript library for DOM operations",
   "version": "3.3.2-pre",
-  "main": "dist/jquery.js",
-  "homepage": "https://jquery.com",
-  "author": {
-    "name": "JS Foundation and other contributors",
-    "url": "https://github.com/jquery/jquery/blob/master/AUTHORS.txt"
-  },
+  "main": "dist/zp.js",
+  "homepage": "https://www.pinghuazhuang.com",
+  "author": "PinghuaZhuang <zphua2016@gmail.com>",
   "keywords": [
     "common",
     "zp"
   ],
-  "bugs": {
-    "url": "https://github.com/jquery/jquery/issues"
-  },
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
