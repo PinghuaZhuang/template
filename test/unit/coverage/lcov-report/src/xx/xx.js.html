@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for src/wrapper.js</title>
+    <title>Code coverage report for src/xx/xx.js</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="..\prettify.css" />
-    <link rel="stylesheet" href="..\base.css" />
+    <link rel="stylesheet" href="..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\base.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(..\sort-arrow-sprite.png);
+            background-image: url(..\..\sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -16,28 +16,28 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="..\index.html">All files</a> / <a href="index.html">src</a> wrapper.js
+      <a href="..\..\index.html">All files</a> / <a href="index.html">src/xx</a> xx.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>0/8</span>
+        <span class='fraction'>0/9</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/10</span>
+        <span class='fraction'>0/8</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/3</span>
+        <span class='fraction'>0/2</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>0/8</span>
+        <span class='fraction'>0/9</span>
       </div>
     </div>
     <p class="quiet">
@@ -72,9 +72,12 @@
 <a name='L24'></a><a href='#L24'>24</a>
 <a name='L25'></a><a href='#L25'>25</a>
 <a name='L26'></a><a href='#L26'>26</a>
-<a name='L27'></a><a href='#L27'>27</a>
-<a name='L28'></a><a href='#L28'>28</a>
-<a name='L29'></a><a href='#L29'>29</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L27'></a><a href='#L27'>27</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -83,13 +86,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -97,39 +98,32 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/* eslint-disable no-unused-vars*/
-<span class="cstat-no" title="statement not covered" >( <span class="fstat-no" title="function not covered" >function ( </span>global, factory ) {</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * @fileOverview xx
+ * @description xx
+ */
+<span class="cstat-no" title="statement not covered" >( <span class="fstat-no" title="function not covered" >function ( </span>window ) {</span>
 &nbsp;
-    'use strict';
+    var xx = <span class="cstat-no" title="statement not covered" >{</span>
+            color: 'blue'
+    };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if ( typeof module === 'object' &amp;&amp; typeof module.exports === 'object' ) {</span>
+<span class="cstat-no" title="statement not covered" >    window.xx = xx;</span>
 &nbsp;
-        // For CommonJS and CommonJS-like environments where a proper `window`
-<span class="cstat-no" title="statement not covered" >        module.exports = global.document ?</span>
-            factory( global, true ) :
-<span class="fstat-no" title="function not covered" >            function ( </span>w ) {
-<span class="cstat-no" title="statement not covered" >                if ( !w.document ) {</span>
-<span class="cstat-no" title="statement not covered" >                    throw new Error( 'zp requires a window with a document' );</span>
-                }
-<span class="cstat-no" title="statement not covered" >                return factory( w );</span>
-            };
+    // EXPOSE
+<span class="cstat-no" title="statement not covered" >    if ( typeof define === 'function' &amp;&amp; define.amd ) {</span>
+<span class="cstat-no" title="statement not covered" >        define( <span class="fstat-no" title="function not covered" >function () </span>{</span>
+<span class="cstat-no" title="statement not covered" >            return xx;</span>
+        } );
+    } else <span class="cstat-no" title="statement not covered" >if ( typeof module !== 'undefined' &amp;&amp; module.exports ) {</span>
+<span class="cstat-no" title="statement not covered" >        module.exports = xx;</span>
     } else {
-<span class="cstat-no" title="statement not covered" >        factory( global );</span>
+<span class="cstat-no" title="statement not covered" >        window.xx = xx;</span>
     }
 &nbsp;
-// Pass this if window is not defined yet
-} )( typeof window !== 'undefined' ? window : this, <span class="fstat-no" title="function not covered" >function ( </span>window, noGlobal ) {
+    // EXPOSE
 &nbsp;
-'use strict';
-&nbsp;
-// @CODE
-<span class="cstat-no" title="statement not covered" >return zp;</span>
-} );
+} )( window );
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
@@ -139,7 +133,7 @@
   generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed May 16 2018 03:16:19 GMT+0800 (中国标准时间)
 </div>
 </div>
-<script src="..\prettify.js"></script>
+<script src="..\..\prettify.js"></script>
 <script>
 window.onload = function () {
         if (typeof prettyPrint === 'function') {
@@ -147,7 +141,7 @@ window.onload = function () {
         }
 };
 </script>
-<script src="..\sorter.js"></script>
-<script src="..\block-navigation.js"></script>
+<script src="..\..\sorter.js"></script>
+<script src="..\..\block-navigation.js"></script>
 </body>
 </html>

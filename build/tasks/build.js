@@ -1,7 +1,5 @@
 /**
- * Special concat/build task to handle various jQuery build requirements
- * Concats AMD modules, removes their definitions,
- * and includes/excludes specified modules
+ * Special concat/build task to handle various
  */
 
 module.exports = function ( grunt ) {
@@ -59,7 +57,6 @@ module.exports = function ( grunt ) {
      * @param {String} contents The contents to be written (including their AMD wrappers)
      */
     function convert ( name, path, contents ) {
-        var amdName;
 
         // Convert var modules
         if ( /.\/var\//.test( path.replace( process.cwd(), '' ) ) ) {
@@ -72,11 +69,11 @@ module.exports = function ( grunt ) {
                 )
                 .replace( rdefineEnd, '' );
 
-        // Sizzle treatment
+        // xx treatment
         } else if ( /\/xx$/.test( name ) ) {
             contents = 'var xx =\n\n' + contents
 
-                // Remove EXPOSE lines from Sizzle
+                // Remove EXPOSE lines from xx
                 .replace( /\/\/\s*EXPOSE[\w\W]*\/\/\s*EXPOSE/, 'return xx;' );
 
         } else {
@@ -104,24 +101,8 @@ module.exports = function ( grunt ) {
                 .replace( /define\(\[[^\]]*\]\)[\W\n]+$/, '' );
         }
 
-        // AMD Name
-        if ( ( amdName = grunt.option( 'amd' ) ) != null && /^exports\/amd$/.test( name ) ) {
-            if ( amdName ) {
-                grunt.log.writeln( 'Naming jQuery with AMD name: ' + amdName );
-            } else {
-                grunt.log.writeln( 'AMD name now anonymous' );
-            }
-
-            // Remove the comma for anonymous defines
-            contents = contents
-                .replace( /(\s*)'jquery'(\,\s*)/, amdName ? '$1\'' + amdName + '\'$2' : '' );
-
-        }
-
         contents = contents.replace( /^\n*/, '' );
         contents = contents.replace( /\n*$/, '\n' );
-
-        // grunt.log.ok( 'xxxx:' + JSON.stringify( contents ) );
 
         return contents;
     }
@@ -131,7 +112,7 @@ module.exports = function ( grunt ) {
         'Concatenate source, remove sub AMD definitions, ' +
             '(include/exclude modules with +/- flags), embed date/version',
     function () {
-        var flag, /* index, */
+        var flag,
             done = this.async(),
             flags = this.flags,
             optIn = flags[ '*' ],
@@ -246,38 +227,10 @@ module.exports = function ( grunt ) {
             version += ' ' + process.env.COMMIT;
         }
 
-        // figure out which files to exclude based on these rules in this order:
-        //  dependency explicit exclude
-        //  > explicit exclude
-        //  > explicit include
-        //  > dependency implicit exclude
-        //  > implicit exclude
-        // examples:
-        //  *                  none (implicit exclude)
-        //  *:*                all (implicit include)
-        //  *:*:-css           all except css and dependents (explicit > implicit)
-        //  *:*:-css:+effects  same (excludes effects because explicit include is
-        //                     trumped by explicit exclude of dependency)
-        //  *:+effects         none except effects and its dependencies
-        //                     (explicit include trumps implicit exclude of dependency)
         delete flags[ '*' ];
         for ( flag in flags ) {
             excluder( flag );
         }
-
-        // Handle Sizzle exclusion
-        // Replace with selector-native
-        // if ( ( index = excluded.indexOf( 'sizzle' ) ) > -1 ) {
-        //     config.rawText.selector = 'define(["./selector-native"]);';
-        //     excluded.splice( index, 1 );
-        // }
-
-        // Replace exports/global with a noop noConflict
-        // if ( ( index = excluded.indexOf( 'exports/global' ) ) > -1 ) {
-        // 	config.rawText[ 'exports/global' ] = 'define(['../core'],' +
-        // 		'function ( jQuery ) {\njQuery.noConflict = function () {};\n});';
-        // 	excluded.splice( index, 1 );
-        // }
 
         grunt.verbose.writeflags( excluded, 'Excluded' );
         grunt.verbose.writeflags( included, 'Included' );

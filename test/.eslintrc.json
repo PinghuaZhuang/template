@@ -20,11 +20,12 @@
         "noGlobal": true,
         "describe": true,
         "it": true,
-        "expect": true
+        "expect": true,
+        "require": true
 	},
 	"rules": {
 		// 缩进
-        // "indent": [ "error", 4 ],
+        "indent": [ "error", 4 ],
 
         // 使用单引号
         "quotes": [ "error", "single" ],

@@ -17,5 +17,6 @@ npm-debug.log*
 !/dist/.eslintrc.json
 
 /node_modules
+/*node_modules
 
 /test/node_smoke_tests/lib/ensure_iterability.js
