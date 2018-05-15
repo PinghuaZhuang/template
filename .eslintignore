@@ -1,0 +1,5 @@
+node_modules
+*.min.js
+dist/**
+!dist/jquery.js
+test/unit/coverage/
