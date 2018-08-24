@@ -9,13 +9,16 @@
 
 	"env": {
 		"node": true
-    },
+	},
+
     "globals": {
 		"window": true,
 		"zp": true,
 		"define": true,
 		"module": true,
-		"noGlobal": true
+        "noGlobal": true,
+        "WeakMap": true,
+        "WeakSet": true
 	},
 	"rules": {
 		// 缩进
