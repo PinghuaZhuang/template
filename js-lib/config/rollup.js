@@ -1,9 +1,9 @@
-var pkg = require('../package.json');
+var pkg = require('../package.json')
 
 // 兼容 jslib-base 和 @yanhaijing/jslib-base
 // var name = pkg.name.split('/').pop();
-var name = 'z';
-var version = pkg.version;
+var name = 'z'
+var version = pkg.version
 
 var banner =
 `/*!
@@ -14,5 +14,5 @@ var banner =
  */
 `;
 
-exports.name = name;
-exports.banner = banner;
+exports.name = name
+exports.banner = banner

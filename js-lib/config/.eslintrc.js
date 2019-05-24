@@ -47,8 +47,8 @@ module.exports = {
     // add your custom rules here
     rules: {
 
-        // allow async-await
-        'generator-star-spacing': 'off',
+        // * 号前面空格
+        'generator-star-spacing': [ 'error', { 'before': true, 'after': false } ],
 
         // allow debugger during development
         'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
@@ -64,18 +64,28 @@ module.exports = {
         // 多个空格
         // a  =    19;
         // 行尾注释多个空格
-        'no-multi-spaces': [ 'error', {
-            exceptions: {
-                'VariableDeclarator': true
-            },
-            ignoreEOLComments: true
-        } ],
+        // 'no-multi-spaces': [ 'error', {
+        //     exceptions: {
+        //         'VariableDeclarator': true
+        //     },
+        //     ignoreEOLComments: true
+        // } ],
+
+        // 行注释位置
+        'line-comment-position': 'off',
+        'lines-around-comment': 'off',
 
         // 函数前空格
-        'space-before-function-paren': ['error', {
+        'space-before-function-paren': [ 'error', {
             'anonymous': 'always',      // 匿名函数
             'named': 'always'           // 申明函数
-        }],
+        } ],
+
+        // 代码后面内联注释
+        'no-inline-comments': 'off',
+
+        // 分号
+        'semi': [ 'error', 'never' ],
 
         // 与 null 对比较
         'eqeqeq': [ 'error', 'always', { 'null': 'ignore' } ]

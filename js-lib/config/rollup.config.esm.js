@@ -1,7 +1,7 @@
-import config from './rollup.config';
+import config from './rollup.config'
 
 // ES output
-config.output.format = 'es';
-config.output.file = 'dist/index.esm.js';
+config.output.format = 'es'
+config.output.file = 'dist/index.esm.js'
 
-export default config;
+export default config

@@ -1,10 +1,5 @@
-import z from './core';
-import Callback from './class/Callback';
-import Data from './class/Data';
+let z = {
+    version: VERSION
+}
 
-z.extend( {
-    Callback,
-    Data
-} );
-
-export default z;
+export default z

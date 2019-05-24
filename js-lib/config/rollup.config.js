@@ -1,9 +1,9 @@
 // rollup.config.js
 
-var babel = require('rollup-plugin-babel');
-var common = require('./rollup.js');
-var replace = require('rollup-plugin-replace');
-var pkg = require('../package.json');
+var babel = require('rollup-plugin-babel')
+var common = require('./rollup.js')
+var replace = require('rollup-plugin-replace')
+var pkg = require('../package.json')
 
 export default {
     input: 'src/index.js',
@@ -15,15 +15,15 @@ export default {
         banner: common.banner,
     },
     plugins: [
-        babel({
+        babel( {
             runtimeHelpers: true,
             exclude: 'node_modules/**'
-        }),
-        replace({
+        } ),
+        replace( {
             // include: 'src/index.js', // 指定可以使用变量的文件路径
             exclude: 'node_modules/**',
-            ENV: JSON.stringify(process.env.NODE_ENV || 'development'),
+            ENV: JSON.stringify( process.env.NODE_ENV || 'development' ),
             VERSION: JSON.stringify( pkg.version )
-        })
+        } )
     ]
 };

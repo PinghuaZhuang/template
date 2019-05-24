@@ -1,9 +1,9 @@
-import config from './rollup.config';
-var babel = require("rollup-plugin-babel");
-var nodeResolve = require('rollup-plugin-node-resolve');
-var commonjs = require('rollup-plugin-commonjs');
-var replace = require('rollup-plugin-replace');
-var common = require('./rollup.js');
+import config from './rollup.config'
+var babel = require( 'rollup-plugin-babel' )
+var nodeResolve = require( 'rollup-plugin-node-resolve' )
+var commonjs = require( 'rollup-plugin-commonjs' )
+var replace = require( 'rollup-plugin-replace' )
+var common = require( './rollup.js')
 
 export default {
     input: 'src/index.js',
@@ -16,14 +16,14 @@ export default {
         // banner: common.banner,
     },
     plugins: [
-        nodeResolve({
+        nodeResolve( {
             main: true,
             jsnext: true,
             module: true
-        }),
-        commonjs({
+        } ),
+        commonjs( {
             include: 'node_modules/**',
-        }),
+        } ),
         ...config.plugins
     ]
 };
