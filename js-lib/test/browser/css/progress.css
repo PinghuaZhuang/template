@@ -1,0 +1,41 @@
+.progress {
+    float: left;
+    width: 143px;
+    padding-top: 9px;
+  }
+  .progress_bg {
+    height: 10px;
+    border: 1px solid rgba(204, 204, 204, 0.5);
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: rgba(241, 241, 241, 0.5);
+  }
+  .progress_bar {
+    background: #ffab2b;
+    width: 0;
+    height: 10px;
+    border-radius: 5px;
+  }
+  .progress_btn {
+    width: 10px;
+    height: 20px;
+    border-radius: 5px;
+    position: absolute;
+    background: #fff;
+    left: 0px;
+    margin-left: -10px;
+    top: 5px;
+    cursor: pointer;
+    border: 1px solid rgba(204, 204, 204, 0.5);
+    box-sizing: border-box;
+    transform: translateX(5px);
+  }
+  .progress_btn:hover {
+    border-color: #F7B824;
+  }
+  .progress .text {
+    margin-top: 3px;
+  }
+  #toolbar .dzbz .opts.sub {
+    width: max-content;
+  }
