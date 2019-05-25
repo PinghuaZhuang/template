@@ -1,98 +1,31 @@
-# z
+# My Class
 
-[![](https://img.shields.io/badge/Powered%20by-jslib%20pubsub-brightgreen.svg)](https://github.com/pinghuazhuang/z)
-[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/PinghuaZhuang/z/blob/master/LICENSE)
-[![Build Status](https://travis-ci.org/jsmini/pubsub.svg?branch=master)](https://travis-ci.org/PinghuaZhuang/z)
-[![npm](https://img.shields.io/badge/npm-0.3.2-orange.svg)](https://www.npmjs.com/package/zp-z)
-[![Percentage of issues still open](http://isitmaintained.com/badge/open/jsmini/pubsub.svg)](https://github.com/PinghuaZhuang/z/issues "Percentage of issues still open")
+[![Power](https://img.shields.io/badge/Powered%20by-jslib%20pubsub-brightgreen.svg)](https://github.com/yanhaijing/jslib-base)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/PinghuaZhuang/class/blob/master/LICENSE)
+[![Build Status](https://travis-ci.org/PinghuaZhuang/class.svg?branch=master)](https://travis-ci.org/PinghuaZhuang/class)
+[![npm](https://img.shields.io/npm/v/zp-class.svg)](https://www.npmjs.com/package/zp-class)
+[![Issues](http://isitmaintained.com/badge/open/pinghuazhuang/class.svg)](https://github.com/PinghuaZhuang/class/issues)
+[![Size](https://img.shields.io/github/languages/code-size/pinghuazhuang/class.svg)](https://github.com/PinghuaZhuang/class)
+[![Verison](https://img.shields.io/github/package-json/v/pinghuazhuang/class.svg)](https://github.com/PinghuaZhuang/class/releases)
+[![Tag](https://img.shields.io/github/tag/pinghuazhuang/class.svg)](https://github.com/PinghuaZhuang/class/tags)
+[![Commit](https://img.shields.io/github/last-commit/pinghuazhuang/class.svg)](https://github.com/PinghuaZhuang/class/commits/master)
 
-工具函数库
+自定义一些类, 方便使用.
 
-**注意：译代码依赖ES5环境，对于ie6-8需要引入[es5-shim](http://github.com/es-shims/es5-shim/)才可以兼容，可以查看[demo/demo-global.html](../demo/demo-global.html)中的例子**
 
-## 目录介绍
 
-```
-.
-├── demo 使用demo
-├── dist 编译产出代码
-├── doc 项目文档
-├── src 源代码目录
-├── test 单元测试
-└── CHANGELOG.md 变更日志
-```
+## Document
 
-## 如何使用
+[API](https://github.com/PinghuaZhuang/class/blob/master/doc/api.md)
 
-通过npm下载安装代码
+[CHANGELOG.md](https://github.com/PinghuaZhuang/class/blob/master/CHANGELOG.md)
 
-```bash
-$ npm install --save zp-z
-```
+[TODO.md](https://github.com/PinghuaZhuang/class/blob/master/doc/TODO.md)
 
-如果你是node环境
 
-```js
-var z = require('zp-z');
-```
 
-如果你是webpack等环境
+## Class
 
-```js
-import z from 'zp-z';
-```
-
-如果你是requirejs环境
-
-```js
-requirejs(['node_modules/zp-z/dist/index.aio.min'], function (jsmini_pubsub) {
-    var name = jsmini_pubsub.name;
-})
-```
-
-如果你是浏览器环境
-
-```html
-<script src="node_modules/@jsmini/pubsub/dist/index.aio.js"></script>
-
-<script>
-    var z = window.z;
-</script>
-```
-
-## 文档
-
-[API](https://github.com/jsmini/pubsub/blob/master/doc/api.md)
-
-## 贡献指南
-
-首次运行需要先安装依赖
-
-```bash
-$ npm install
-```
-
-一键打包生成生产代码
-
-```bash
-$ npm run build
-```
-
-运行单元测试，浏览器环境需要手动测试，位于`test/browser`
-
-```bash
-$ npm test
-```
-
-## API文档
-
-[TODO.md](https://github.com/PinghuaZhuang/z/blob/master/doc/api.md)
-
-## 更新日志
-
-[CHANGELOG.md](https://github.com/PinghuaZhuang/z/blob/master/CHANGELOG.md)
-
-## 计划列表
-
-[TODO.md](https://github.com/PinghuaZhuang/z/blob/master/doc/TODO.md)
-
+- [x] Arr
+- [ ] StatesStack
+- [ ] Async
