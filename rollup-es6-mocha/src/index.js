@@ -1,10 +1,5 @@
-import z from './core';
-import Callback from './class/Callback';
-import Data from './class/Data';
 
-z.extend( {
-    Callback,
-    Data
-} );
-
-export default z;
+let a = Symbol( 'xxxx' )
+let z = {
+    [ a ]: 1
+}
